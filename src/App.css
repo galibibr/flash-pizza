@@ -9,3 +9,12 @@
 .col_blue {
   color: #192252;
 }
+
+.shad {
+  box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.065);
+}
+
+.imgs {
+  width: 70%;
+  margin: auto;
+}
