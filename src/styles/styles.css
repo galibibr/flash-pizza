@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: green;
+}
+
+h2 {
+  color: skyblue;
+}
+
+nav {
+  color: aqua;
+  font-size: 40px;
+}
+
+footer {
+  color: rgb(25, 0, 255);
+  font-size: 50px;
+}/*# sourceMappingURL=styles.css.map */
