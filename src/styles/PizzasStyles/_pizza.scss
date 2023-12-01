@@ -1,0 +1,94 @@
+@use "../global/fonts" as *;
+@use "../global/colors" as *;
+
+.pizza {
+  display: flex;
+  transition: 200ms;
+
+  @media (min-width: 444px) {
+    padding: 22px 28px;
+    transition: 200ms;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 1px 0 30px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    gap: 22px;
+  }
+  @media (max-width: 444px) {
+    border-bottom: 1px solid #c4c4c4;
+    transition: 200ms;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .img-box {
+    @media (max-width: 444px) {
+      width: 45%;
+    }
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+      // height: 100%;
+    }
+  }
+
+  .box-right {
+    @media (max-width: 444px) {
+      width: 55%;
+      padding: 20px 0;
+      transition: 200ms;
+    }
+    @media (max-width: 400px) {
+      padding: 8px 0;
+      transition: 200ms;
+   }
+    font-family: $monst;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .right-boxTop {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      p:nth-child(1) {
+        font-weight: 700;
+        @media (max-width: 444px) {
+          font-size: 18px;
+        }
+        font-size: 22px;
+      }
+      p:nth-child(2) {
+        font-size: 14px;
+        @media (max-width: 444px) {
+          font-size: 12px;
+        }
+        @media (min-width: 444px) {
+          min-height: 50px;
+        }
+      }
+    }
+
+    .right-boxBottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .price {
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .btn-addToCard {
+        background-color: $orange;
+        border-radius: 50%;
+        border: none;
+        color: white;
+        padding: 8px;
+        font-size: 40px;
+        display: flex;
+      }
+    }
+  }
+}

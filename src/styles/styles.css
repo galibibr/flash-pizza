@@ -9,6 +9,7 @@ ul {
 
 main {
   padding-top: 80px;
+  background-color: rgb(245, 236, 224);
 }
 
 body::-webkit-scrollbar {
@@ -80,6 +81,7 @@ nav .nav-mobile .a-logo {
   padding-left: 18px;
   display: flex;
   align-items: center;
+  transition: 200ms;
 }
 nav .nav-mobile .a-logo .logo {
   width: 196px;
@@ -244,6 +246,7 @@ nav ._nav-desktop {
 }
 nav ._nav-desktop ._a-logo img {
   width: 196px;
+  transition: 200ms;
 }
 nav ._nav-desktop ._a-logo img:hover {
   transform: scale(1.05);
@@ -369,4 +372,138 @@ nav ._nav-desktop ul li:nth-child(5) a:active {
 footer {
   color: rgb(25, 0, 255);
   font-size: 40px;
+}
+
+.pizza {
+  display: flex;
+  transition: 200ms;
+}
+@media (min-width: 444px) {
+  .pizza {
+    padding: 22px 28px;
+    transition: 200ms;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 1px 0 30px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    gap: 22px;
+  }
+}
+@media (max-width: 444px) {
+  .pizza {
+    border-bottom: 1px solid #c4c4c4;
+    transition: 200ms;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 0;
+  }
+}
+.pizza .img-box {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 444px) {
+  .pizza .img-box {
+    width: 45%;
+  }
+}
+.pizza .img-box img {
+  width: 100%;
+}
+.pizza .box-right {
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 444px) {
+  .pizza .box-right {
+    width: 55%;
+    padding: 20px 0;
+    transition: 200ms;
+  }
+}
+@media (max-width: 400px) {
+  .pizza .box-right {
+    padding: 8px 0;
+    transition: 200ms;
+  }
+}
+.pizza .box-right .right-boxTop {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pizza .box-right .right-boxTop p:nth-child(1) {
+  font-weight: 700;
+  font-size: 22px;
+}
+@media (max-width: 444px) {
+  .pizza .box-right .right-boxTop p:nth-child(1) {
+    font-size: 18px;
+  }
+}
+.pizza .box-right .right-boxTop p:nth-child(2) {
+  font-size: 14px;
+}
+@media (max-width: 444px) {
+  .pizza .box-right .right-boxTop p:nth-child(2) {
+    font-size: 12px;
+  }
+}
+@media (min-width: 444px) {
+  .pizza .box-right .right-boxTop p:nth-child(2) {
+    min-height: 50px;
+  }
+}
+.pizza .box-right .right-boxBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pizza .box-right .right-boxBottom .price {
+  font-size: 18px;
+  font-weight: 700;
+}
+.pizza .box-right .right-boxBottom .btn-addToCard {
+  background-color: #FF4E00;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  padding: 8px;
+  font-size: 40px;
+  display: flex;
+}
+
+.box-pizzas {
+  padding: 35px 20px 0 20px;
+}
+.box-pizzas .box-p {
+  display: flex;
+  justify-content: center;
+}
+.box-pizzas .box-p .p-pizza {
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  background-color: #FF4E00;
+  padding: 9px 10px;
+  border-radius: 30px;
+}
+.box-pizzas .list-pizzas {
+  margin-top: 30px;
+  display: grid;
+}
+@media (min-width: 444px) {
+  .box-pizzas .list-pizzas {
+    gap: 30px;
+  }
+}
+@media (min-width: 600px) {
+  .box-pizzas .list-pizzas {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
 }/*# sourceMappingURL=styles.css.map */

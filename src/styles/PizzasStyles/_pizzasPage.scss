@@ -1,0 +1,32 @@
+@use "../global/fonts" as *;
+@use "../global/colors" as *;
+
+.box-pizzas {
+  padding: 35px 20px 0 20px;
+  .box-p {
+    display: flex;
+    justify-content: center;
+    .p-pizza {
+      text-align: center;
+      font-family: $monst;
+      font-weight: 700;
+      font-size: 18px;
+      color: white;
+      background-color: $orange;
+      padding: 9px 10px;
+      border-radius: 30px;
+    }
+  }
+  .list-pizzas {
+    margin-top: 30px;
+    display: grid;
+
+    @media (min-width: 444px) {
+      gap: 30px;
+    }
+    @media (min-width: 600px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  }
+}

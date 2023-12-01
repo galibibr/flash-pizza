@@ -23,7 +23,7 @@ const Navbar = () => {
       {/* Mobile */}
       <div className="nav-mobile">
         {modal ? (
-          <a href="#" className="a-phone">
+          <a href="#" onClick={() => setModal(false)} className="a-phone">
             +38 (066) XXX XX XX
           </a>
         ) : (
@@ -50,7 +50,7 @@ const Navbar = () => {
       </div>
       {/* modal */}
       {modal ? (
-        <div className="modal" ref={windowOnclick} onClick={theModal}>
+        <div className="modal">
           <ul>
             <li>
               <a href="#">Пиццы</a>
