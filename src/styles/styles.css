@@ -3,13 +3,35 @@
   padding: 0;
 }
 
+body::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+@media (max-width: 768px) {
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #FF4E00;
+  border-radius: 10px;
+}
+
+.shadow-nav {
+  transition: 200ms;
+  height: 100%;
+}
+
 nav {
-  background-color: #5ff;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
   width: 100%;
   position: fixed;
   top: 0;
   overflow: hidden;
   z-index: 100;
+  transition: 200ms;
 }
 nav .nav-mobile {
   background-color: black;
@@ -70,8 +92,9 @@ nav .nav-mobile .box-menuAndBasket .btn-basket .basket-icon {
   font-size: 45px;
 }
 nav .modal {
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 25px 24px;
   background-color: rgba(0, 0, 0, 0.212);
-  height: 100;
 }
 nav .modal ul {
   background-color: white;

@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
+    <nav className={`${modal? "shadow-nav": null}`}>
       {/* mobile */}
       <div className="nav-mobile">
         {modal ? (

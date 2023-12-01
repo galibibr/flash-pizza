@@ -1,8 +1,24 @@
 @use './colors' as *;
 @use './fonts' as *;
 
+$md: 768px;
+$lg: 1064px;
+
 * {
    margin: 0;
    padding: 0;
+}
+
+body::-webkit-scrollbar {
+   background-color: transparent;
+   @media (max-width: $md) {
+      width: 5px;
+   }
+   width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+   background-color: $orange;
+   border-radius: 10px;
 }
 
