@@ -1,6 +1,133 @@
-@use '../global/' as *;
+@use "../global/" as *;
 
 nav {
-   color: $orange;
-   font-size: 40px;
+   background-color: #5ff;
+   width: 100%;
+   position: fixed;
+   top: 0;
+   overflow: hidden;
+   z-index: 100;
+   
+
+   .nav-mobile {
+     background-color: black;
+     display: flex;
+     justify-content: space-between;
+   
+     .a-phone {
+       padding-left: 29px;
+       transition: 200ms;
+       color: white;
+       font-size: 18px;
+       font-weight: 700;
+       line-height: 18px;
+       text-decoration: none;
+       display: flex;
+       align-items: center;
+       font-family: $monst;
+     }
+   
+     .a-logo {
+       padding-left: 18px;
+       display: flex;
+       align-items: center;
+       .logo {
+         width: 196px;
+       }
+     }
+   
+     .box-menuAndBasket {
+       display: flex;
+   
+       .btn-menu-open,
+       .btn-menu-close {
+         transition: 200ms;
+         border: none;
+         width: 70px;
+         height: 80px;
+       }
+       .btn-menu-close {
+         background-color: transparent;
+         .menu-icon {
+           font-size: 55px;
+           color: white;
+         }
+       }
+   
+       .btn-menu-open {
+         background-color: white;
+         .close-icon {
+           font-size: 55px;
+         }
+       }
+   
+       .btn-basket {
+         background-color: $orange;
+         border: none;
+         color: white;
+         width: 84px;
+         height: 80px;
+         .basket-icon {
+           font-size: 45px;
+         }
+       }
+     }
+   }
+
+   .modal {
+      // box-shadow: 0 0 1000px 10px rgba(0, 0, 0, 0.907);
+      // border-radius: 0 0 25px 24px;
+      background-color: rgba(0, 0, 0, 0.212);
+      height: 100;
+   
+     ul {
+       background-color: white;
+       transition: 200ms;
+       a {
+         display: block;
+         text-decoration: none;
+         color: black;
+         padding: 15px 33px;
+         font: {
+           family: $monst;
+           weight: 700;
+           size: 18px;
+         }
+       }
+     }
+   
+     .footer-modal {
+       padding: 15px 33px 22px 33px;
+       background-color: #e5e5e5;
+       border-radius: 0 0 25px 25px;
+       font-family: $roboto;
+       display: flex;
+       justify-content: space-between;
+   
+       .left {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         font-size: 18px;
+         line-height: 21px;
+         p:nth-child(1) {
+            text-transform: uppercase;
+            font-weight: 700;
+         }
+       }
+   
+       .right {
+         display: flex;
+         align-items: center;
+         a {
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            border-radius: 50%;
+            padding: 10px;
+            color: white;
+            font-size: 45px;
+         }
+       }
+     }
+   }
 }

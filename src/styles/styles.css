@@ -4,8 +4,118 @@
 }
 
 nav {
-  color: orange;
-  font-size: 40px;
+  background-color: #5ff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 100;
+}
+nav .nav-mobile {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+nav .nav-mobile .a-phone {
+  padding-left: 29px;
+  transition: 200ms;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat";
+}
+nav .nav-mobile .a-logo {
+  padding-left: 18px;
+  display: flex;
+  align-items: center;
+}
+nav .nav-mobile .a-logo .logo {
+  width: 196px;
+}
+nav .nav-mobile .box-menuAndBasket {
+  display: flex;
+}
+nav .nav-mobile .box-menuAndBasket .btn-menu-open,
+nav .nav-mobile .box-menuAndBasket .btn-menu-close {
+  transition: 200ms;
+  border: none;
+  width: 70px;
+  height: 80px;
+}
+nav .nav-mobile .box-menuAndBasket .btn-menu-close {
+  background-color: transparent;
+}
+nav .nav-mobile .box-menuAndBasket .btn-menu-close .menu-icon {
+  font-size: 55px;
+  color: white;
+}
+nav .nav-mobile .box-menuAndBasket .btn-menu-open {
+  background-color: white;
+}
+nav .nav-mobile .box-menuAndBasket .btn-menu-open .close-icon {
+  font-size: 55px;
+}
+nav .nav-mobile .box-menuAndBasket .btn-basket {
+  background-color: #FF4E00;
+  border: none;
+  color: white;
+  width: 84px;
+  height: 80px;
+}
+nav .nav-mobile .box-menuAndBasket .btn-basket .basket-icon {
+  font-size: 45px;
+}
+nav .modal {
+  background-color: rgba(0, 0, 0, 0.212);
+  height: 100;
+}
+nav .modal ul {
+  background-color: white;
+  transition: 200ms;
+}
+nav .modal ul a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 15px 33px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+}
+nav .modal .footer-modal {
+  padding: 15px 33px 22px 33px;
+  background-color: #e5e5e5;
+  border-radius: 0 0 25px 25px;
+  font-family: "Roboto";
+  display: flex;
+  justify-content: space-between;
+}
+nav .modal .footer-modal .left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  line-height: 21px;
+}
+nav .modal .footer-modal .left p:nth-child(1) {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+nav .modal .footer-modal .right {
+  display: flex;
+  align-items: center;
+}
+nav .modal .footer-modal .right a {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  font-size: 45px;
 }
 
 footer {
