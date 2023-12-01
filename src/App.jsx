@@ -18,22 +18,24 @@ function App() {
   return (
     <>
       <Navbar />
-      <article>
-        <Swiper
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper">
-          <SwiperSlide>
-            <img src={baner1} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={baner2} alt="" />
-          </SwiperSlide>
-        </Swiper>
-      </article>
+      <main>
+        <div>
+          <Swiper
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper">
+            <SwiperSlide>
+              <img src={baner1} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={baner2} alt="" />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </main>
       {/* <Footer /> */}
     </>
   );

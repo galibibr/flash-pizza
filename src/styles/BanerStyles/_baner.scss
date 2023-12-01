@@ -17,6 +17,18 @@
       border-radius: 50%;
       border: 6px solid white;
       background-color: white;
+      display: inline-block;
+      &:hover {
+        transform: scale(1.1);
+        background-color: $orange;
+        border-color: $orange;
+        transition: 200ms;
+        opacity: 1;
+      }
+      &:active {
+        transform: scale(0.9);
+        transition: 200ms;
+      }
     }
    }
 }

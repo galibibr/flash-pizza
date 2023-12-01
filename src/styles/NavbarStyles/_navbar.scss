@@ -16,6 +16,8 @@ nav {
 
   //   Mobile
   .nav-mobile {
+    display: flex;
+    align-items: center;
     @media (max-width: $md) {
       background-color: black;
       display: flex;
@@ -35,6 +37,16 @@ nav {
       display: flex;
       align-items: center;
       font-family: $monst;
+      &:hover {
+          transform: scale(1.05);
+          transition: 200ms;
+          color: $orange;
+        }
+        &:active {
+          transform: scale(0.95);
+          opacity: 0.5;
+          transition: 200ms;
+        }
     }
 
     .a-logo {
@@ -43,6 +55,15 @@ nav {
       align-items: center;
       .logo {
         width: 196px;
+        &:hover {
+          transform: scale(1.05);
+          transition: 200ms;
+        }
+        &:active {
+          transform: scale(0.95);
+          opacity: 0.5;
+          transition: 200ms;
+        }
       }
     }
 
@@ -61,6 +82,17 @@ nav {
         .menu-icon {
           font-size: 55px;
           color: white;
+          cursor: pointer;
+          &:hover {
+          transform: scale(1.05);
+          transition: 200ms;
+          color: $orange;
+        }
+        &:active {
+          transform: scale(0.95);
+          opacity: 0.5;
+          transition: 200ms;
+        }
         }
       }
 
@@ -68,6 +100,17 @@ nav {
         background-color: white;
         .close-icon {
           font-size: 55px;
+          cursor: pointer;
+          &:hover {
+          transform: scale(1.05);
+          transition: 200ms;
+          color: $orange;
+        }
+        &:active {
+          transform: scale(0.95);
+          opacity: 0.5;
+          transition: 200ms;
+        }
         }
       }
 
@@ -77,8 +120,23 @@ nav {
         color: white;
         width: 84px;
         height: 80px;
+        &:hover {
+          background-color: white;
+          transition: 200ms;
+          color: $orange;
+        }
         .basket-icon {
+          cursor: pointer;
           font-size: 45px;
+          &:hover {
+          transform: scale(1.05);
+          transition: 200ms;
+        }
+        &:active {
+          transform: scale(0.95);
+          opacity: 0.5;
+          transition: 200ms;
+        }
         }
       }
     }
@@ -101,6 +159,11 @@ nav {
           family: $monst;
           weight: 700;
           size: 18px;
+        }
+        &:active {
+          opacity: 0.5;
+          transition: 200ms;
+          color: $orange;
         }
       }
     }
@@ -129,12 +192,24 @@ nav {
         display: flex;
         align-items: center;
         a {
-          background-color: rgba(0, 0, 0, 0.4);
+          background-color: $orange;
           display: flex;
           border-radius: 50%;
           padding: 10px;
           color: white;
           font-size: 45px;
+          transition: 200ms;
+          &:hover {
+          transform: scale(1.05);
+          transition: 200ms;
+          background-color: white;
+          color: $orange;
+        }
+        &:active {
+          transform: scale(0.95);
+          opacity: 0.5;
+          transition: 200ms;
+        }
         }
       }
     }
@@ -155,6 +230,15 @@ nav {
     ._a-logo {
       img {
         width: 196px;
+        &:hover {
+          transform: scale(1.05);
+          transition: 200ms;
+        }
+        &:active {
+          transition: 200ms;
+          transform: scale(0.95);
+          opacity: 0.5;
+        }
       }
     }
 
@@ -169,6 +253,17 @@ nav {
         a {
           text-decoration: none;
           color: white;
+          display: inline-block;
+          &:hover {
+            color: $orange;
+            transition: 200ms;
+            transform: scale(1.05);
+          }
+          &:active {
+            transform: scale(0.95);
+            transition: 200ms;
+            opacity: 0.5;
+          }
         }
       }
 
@@ -181,26 +276,29 @@ nav {
         font-weight: 700;
       }
 
-      li:nth-child(4) {
-        display: flex;
-        a {
-          background-color: rgba(255, 255, 255, 0.6);
-          display: flex;
-          border-radius: 50%;
-          padding: 8px;
-          color: black;
-          font-size: 30px;
-        }
-      }
+      li:nth-child(4),
       li:nth-child(5) {
         display: flex;
         a {
+          // background-color: rgba(255, 255, 255, 0.6);
           background-color: $orange;
           display: flex;
           border-radius: 50%;
           padding: 8px;
           color: white;
           font-size: 30px;
+          transition: 200ms;
+          &:hover {
+            transition: 200ms;
+            background-color: white;
+            color: $orange;
+            transform: scale(1.1);
+          }
+          &:active {
+            transform: scale(0.95);
+            transition: 200ms;
+            opacity: 0.5;
+          }
         }
       }
     }

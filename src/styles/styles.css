@@ -7,7 +7,7 @@ ul {
   list-style: none;
 }
 
-article {
+main {
   padding-top: 80px;
 }
 
@@ -41,6 +41,8 @@ nav {
   transition: 200ms;
 }
 nav .nav-mobile {
+  display: flex;
+  align-items: center;
   transition: 200ms;
   display: none;
 }
@@ -64,6 +66,16 @@ nav .nav-mobile .a-phone {
   align-items: center;
   font-family: "Montserrat";
 }
+nav .nav-mobile .a-phone:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+  color: #FF4E00;
+}
+nav .nav-mobile .a-phone:active {
+  transform: scale(0.95);
+  opacity: 0.5;
+  transition: 200ms;
+}
 nav .nav-mobile .a-logo {
   padding-left: 18px;
   display: flex;
@@ -71,6 +83,15 @@ nav .nav-mobile .a-logo {
 }
 nav .nav-mobile .a-logo .logo {
   width: 196px;
+}
+nav .nav-mobile .a-logo .logo:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+}
+nav .nav-mobile .a-logo .logo:active {
+  transform: scale(0.95);
+  opacity: 0.5;
+  transition: 200ms;
 }
 nav .nav-mobile .box-menuAndBasket {
   display: flex;
@@ -88,12 +109,34 @@ nav .nav-mobile .box-menuAndBasket .btn-menu-close {
 nav .nav-mobile .box-menuAndBasket .btn-menu-close .menu-icon {
   font-size: 55px;
   color: white;
+  cursor: pointer;
+}
+nav .nav-mobile .box-menuAndBasket .btn-menu-close .menu-icon:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+  color: #FF4E00;
+}
+nav .nav-mobile .box-menuAndBasket .btn-menu-close .menu-icon:active {
+  transform: scale(0.95);
+  opacity: 0.5;
+  transition: 200ms;
 }
 nav .nav-mobile .box-menuAndBasket .btn-menu-open {
   background-color: white;
 }
 nav .nav-mobile .box-menuAndBasket .btn-menu-open .close-icon {
   font-size: 55px;
+  cursor: pointer;
+}
+nav .nav-mobile .box-menuAndBasket .btn-menu-open .close-icon:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+  color: #FF4E00;
+}
+nav .nav-mobile .box-menuAndBasket .btn-menu-open .close-icon:active {
+  transform: scale(0.95);
+  opacity: 0.5;
+  transition: 200ms;
 }
 nav .nav-mobile .box-menuAndBasket .btn-basket {
   background-color: #FF4E00;
@@ -102,8 +145,23 @@ nav .nav-mobile .box-menuAndBasket .btn-basket {
   width: 84px;
   height: 80px;
 }
+nav .nav-mobile .box-menuAndBasket .btn-basket:hover {
+  background-color: white;
+  transition: 200ms;
+  color: #FF4E00;
+}
 nav .nav-mobile .box-menuAndBasket .btn-basket .basket-icon {
+  cursor: pointer;
   font-size: 45px;
+}
+nav .nav-mobile .box-menuAndBasket .btn-basket .basket-icon:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+}
+nav .nav-mobile .box-menuAndBasket .btn-basket .basket-icon:active {
+  transform: scale(0.95);
+  opacity: 0.5;
+  transition: 200ms;
 }
 nav .modal {
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3);
@@ -122,6 +180,11 @@ nav .modal ul a {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 18px;
+}
+nav .modal ul a:active {
+  opacity: 0.5;
+  transition: 200ms;
+  color: #FF4E00;
 }
 nav .modal .footer-modal {
   padding: 15px 33px 22px 33px;
@@ -147,12 +210,24 @@ nav .modal .footer-modal .right {
   align-items: center;
 }
 nav .modal .footer-modal .right a {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #FF4E00;
   display: flex;
   border-radius: 50%;
   padding: 10px;
   color: white;
   font-size: 45px;
+  transition: 200ms;
+}
+nav .modal .footer-modal .right a:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+  background-color: white;
+  color: #FF4E00;
+}
+nav .modal .footer-modal .right a:active {
+  transform: scale(0.95);
+  opacity: 0.5;
+  transition: 200ms;
 }
 nav ._nav-desktop {
   background-color: black;
@@ -170,6 +245,15 @@ nav ._nav-desktop {
 nav ._nav-desktop ._a-logo img {
   width: 196px;
 }
+nav ._nav-desktop ._a-logo img:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+}
+nav ._nav-desktop ._a-logo img:active {
+  transition: 200ms;
+  transform: scale(0.95);
+  opacity: 0.5;
+}
 nav ._nav-desktop ul {
   display: flex;
   align-items: center;
@@ -180,6 +264,17 @@ nav ._nav-desktop ul {
 nav ._nav-desktop ul li a {
   text-decoration: none;
   color: white;
+  display: inline-block;
+}
+nav ._nav-desktop ul li a:hover {
+  color: #FF4E00;
+  transition: 200ms;
+  transform: scale(1.05);
+}
+nav ._nav-desktop ul li a:active {
+  transform: scale(0.95);
+  transition: 200ms;
+  opacity: 0.5;
 }
 nav ._nav-desktop ul li:nth-child(1),
 nav ._nav-desktop ul :nth-child(2) {
@@ -188,20 +283,11 @@ nav ._nav-desktop ul :nth-child(2) {
 nav ._nav-desktop ul li:nth-child(3) {
   font-weight: 700;
 }
-nav ._nav-desktop ul li:nth-child(4) {
-  display: flex;
-}
-nav ._nav-desktop ul li:nth-child(4) a {
-  background-color: rgba(255, 255, 255, 0.6);
-  display: flex;
-  border-radius: 50%;
-  padding: 8px;
-  color: black;
-  font-size: 30px;
-}
+nav ._nav-desktop ul li:nth-child(4),
 nav ._nav-desktop ul li:nth-child(5) {
   display: flex;
 }
+nav ._nav-desktop ul li:nth-child(4) a,
 nav ._nav-desktop ul li:nth-child(5) a {
   background-color: #FF4E00;
   display: flex;
@@ -209,6 +295,20 @@ nav ._nav-desktop ul li:nth-child(5) a {
   padding: 8px;
   color: white;
   font-size: 30px;
+  transition: 200ms;
+}
+nav ._nav-desktop ul li:nth-child(4) a:hover,
+nav ._nav-desktop ul li:nth-child(5) a:hover {
+  transition: 200ms;
+  background-color: white;
+  color: #FF4E00;
+  transform: scale(1.1);
+}
+nav ._nav-desktop ul li:nth-child(4) a:active,
+nav ._nav-desktop ul li:nth-child(5) a:active {
+  transform: scale(0.95);
+  transition: 200ms;
+  opacity: 0.5;
 }
 
 .swiper {
@@ -234,6 +334,24 @@ nav ._nav-desktop ul li:nth-child(5) a {
   border-radius: 50%;
   border: 6px solid white;
   background-color: white;
+  display: inline-block;
+}
+.swiper .swiper-pagination-fraction span:hover,
+.swiper .swiper-pagination-custom span:hover,
+.swiper .swiper-horizontal > .swiper-pagination-bullets span:hover,
+.swiper .swiper-pagination-bullets.swiper-pagination-horizontal span:hover {
+  transform: scale(1.1);
+  background-color: #FF4E00;
+  border-color: #FF4E00;
+  transition: 200ms;
+  opacity: 1;
+}
+.swiper .swiper-pagination-fraction span:active,
+.swiper .swiper-pagination-custom span:active,
+.swiper .swiper-horizontal > .swiper-pagination-bullets span:active,
+.swiper .swiper-pagination-bullets.swiper-pagination-horizontal span:active {
+  transform: scale(0.9);
+  transition: 200ms;
 }
 
 .swiper-slide {
