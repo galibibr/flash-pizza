@@ -1,4 +1,6 @@
+@use '../global/' as *;
+
 nav {
-   color: aqua;
+   color: $orange;
    font-size: 40px;
 }
