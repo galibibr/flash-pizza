@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import logo from "../assets/logo.png";
 import { IoMenu } from "react-icons/io5";
 import { BsBasket2 } from "react-icons/bs";
@@ -11,9 +11,15 @@ const Navbar = () => {
   const handleModal = () => {
     setModal(!modal);
   };
+  const windowOnclick = useRef();
+  const theModal = (event) => {
+    if (modal && event.terger !== windowOnclick.current) {
+      setModal(false);
+    }
+  };
 
   return (
-    <nav className={`${modal? "shadow-nav": null}`}>
+    <nav className={`${modal ? "shadow-nav" : null}`}>
       {/* Mobile */}
       <div className="nav-mobile">
         {modal ? (
@@ -44,7 +50,7 @@ const Navbar = () => {
       </div>
       {/* modal */}
       {modal ? (
-        <div className="modal">
+        <div className="modal" ref={windowOnclick} onClick={theModal}>
           <ul>
             <li>
               <a href="#">Пиццы</a>
@@ -79,11 +85,25 @@ const Navbar = () => {
           <img src={logo} className="_logo" alt="Logo Flash Pizza" />
         </a>
         <ul>
-          <li><a href="#">Пиццы</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">+38 (066) XXX XX XX</a></li>
-          <li><a href="#"><FaInstagram /></a></li>
-          <li><a href="#"><BsBasket2 className="basket-icon" /></a></li>
+          <li>
+            <a href="#">Пиццы</a>
+          </li>
+          <li>
+            <a href="#">Доставка</a>
+          </li>
+          <li>
+            <a href="#">+38 (066) XXX XX XX</a>
+          </li>
+          <li>
+            <a href="#">
+              <FaInstagram />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <BsBasket2 className="basket-icon" />
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

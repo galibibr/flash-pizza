@@ -14,6 +14,7 @@ nav {
   z-index: 100;
   transition: 200ms;
 
+  //   Mobile
   .nav-mobile {
     @media (max-width: $md) {
       background-color: black;
@@ -84,7 +85,7 @@ nav {
   }
 
   .modal {
-    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3);
     border-radius: 0 0 25px 24px;
     background-color: rgba(0, 0, 0, 0.212);
 
@@ -205,16 +206,3 @@ nav {
     }
   }
 }
-
-// .right {
-//         display: flex;
-//         align-items: center;
-//         a {
-//           background-color: rgba(0, 0, 0, 0.4);
-//           display: flex;
-//           border-radius: 50%;
-//           padding: 10px;
-//           color: white;
-//           font-size: 45px;
-//         }
-//       }

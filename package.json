@@ -13,7 +13,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
