@@ -6,7 +6,7 @@
 }
 nav {
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+  //   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
   width: 100%;
   position: fixed;
   top: 0;
@@ -15,10 +15,14 @@ nav {
   transition: 200ms;
 
   .nav-mobile {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-
+    @media (max-width: $md) {
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      transition: 200ms;
+    }
+    transition: 200ms;
+    display: none;
     .a-phone {
       padding-left: 29px;
       transition: 200ms;
@@ -134,4 +138,83 @@ nav {
       }
     }
   }
+
+  //   Desktop
+  ._nav-desktop {
+    background-color: black;
+    padding: 15px 39px;
+    display: flex;
+    justify-content: space-between;
+    transition: 200ms;
+    @media (max-width: $md) {
+      display: none;
+      transition: 200ms;
+    }
+
+    ._a-logo {
+      img {
+        width: 196px;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-family: $monst;
+      transition: 200ms;
+
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+
+      li:nth-child(1),
+      :nth-child(2) {
+        font-size: 18px;
+      }
+
+      li:nth-child(3) {
+        font-weight: 700;
+      }
+
+      li:nth-child(4) {
+        display: flex;
+        a {
+          background-color: rgba(255, 255, 255, 0.6);
+          display: flex;
+          border-radius: 50%;
+          padding: 8px;
+          color: black;
+          font-size: 30px;
+        }
+      }
+      li:nth-child(5) {
+        display: flex;
+        a {
+          background-color: $orange;
+          display: flex;
+          border-radius: 50%;
+          padding: 8px;
+          color: white;
+          font-size: 30px;
+        }
+      }
+    }
+  }
 }
+
+// .right {
+//         display: flex;
+//         align-items: center;
+//         a {
+//           background-color: rgba(0, 0, 0, 0.4);
+//           display: flex;
+//           border-radius: 50%;
+//           padding: 10px;
+//           color: white;
+//           font-size: 45px;
+//         }
+//       }
