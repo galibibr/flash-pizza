@@ -40,7 +40,7 @@ function App() {
         <Delivery />
         <About />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

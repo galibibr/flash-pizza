@@ -1,4 +1,168 @@
+@use "../global" as *;
+
 footer {
-   color: rgb(25, 0, 255);
-   font-size: 40px;
+  background-color: $orange;
+  font-family: $roboto;
+
+  .box-footer {
+   max-width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
+    display: grid;
+    gap: 20px;
+    @media (min-width: 550px) {
+       grid-template-columns: 1fr 1fr;
+       transition: 200ms;
+    }
+    @media (min-width: 1064px) {
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       transition: 200ms;
+    }
+
+    padding: 30px 20px;
+    color: white;
+    text-align: center;
+    @media (min-width: 1064px) {
+      text-align: start;
+    }
+
+    .time {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (min-width: 1064px) {
+         flex-direction: row;
+         gap: 10px;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        div {
+          background-color: white;
+          display: flex;
+          border-radius: 50%;
+          padding: 10px;
+          color: $orange;
+          font-size: 45px;
+          transition: 200ms;
+        }
+      }
+
+      p:nth-child(1) {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 5px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .phone {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (min-width: 550px) {
+         margin-top: 0;
+      }
+      @media (min-width: 1064px) {
+         flex-direction: row;
+         gap: 10px;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        div {
+          background-color: white;
+          display: flex;
+          border-radius: 50%;
+          padding: 10px;
+          color: $orange;
+          font-size: 45px;
+          transition: 200ms;
+        }
+      }
+
+      p:nth-child(1) {
+        margin-top: 5px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      a {
+        font-size: 18px;
+        color: white;
+      }
+    }
+
+    .mmm {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
+      div {
+        display: flex;
+        align-items: center;
+        a {
+          background-color: white;
+          display: flex;
+          border-radius: 50%;
+          padding: 10px;
+          color: $orange;
+          font-size: 45px;
+          transition: 200ms;
+          &:hover {
+            transform: scale(1.05);
+            transition: 200ms;
+            color: $orange;
+          }
+          &:active {
+            transform: scale(0.95);
+            opacity: 0.5;
+            transition: 200ms;
+          }
+        }
+      }
+
+      div:nth-child(1) {
+      }
+      div:nth-child(2) {
+      }
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      .visa,
+      .master {
+         height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 10px;
+        padding: 0 15px;
+        transition: 200ms;
+        &:hover {
+          transition: 200ms;
+          transform: scale(1.05);
+        }
+        &:active {
+          transition: 200ms;
+          transform: scale(0.95);
+          opacity: 0.7;
+        }
+
+        img {
+          width: 60px;
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
 }
