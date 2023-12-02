@@ -11,6 +11,7 @@ import baner2 from "./assets/baner2.jpg";
 import PizzasPage from "./components/pizzas/PizzasPage";
 import DrinksPage from "./components/drinks/DrinksPage";
 import Delivery from "./components/Delivery";
+import About from "./components/About";
 
 function App() {
   return (
@@ -34,12 +35,10 @@ function App() {
             </SwiperSlide>
           </Swiper>
         </div>
-        {/* Pizzas */}
         <PizzasPage />
-        {/* Drinks */}
         <DrinksPage />
-        {/* Delivery */}
         <Delivery />
+        <About />
       </main>
       {/* <Footer /> */}
     </>

@@ -809,4 +809,20 @@ footer {
     border-radius: 30px;
     box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.2);
   }
+}
+
+.about {
+  font-family: "Roboto";
+  font-size: 18px;
+  padding: 45px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.about p:nth-child(1) {
+  color: #FF4E00;
+  font-weight: 700;
+  text-transform: uppercase;
 }/*# sourceMappingURL=styles.css.map */
