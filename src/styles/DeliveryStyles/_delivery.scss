@@ -1,0 +1,62 @@
+@use "../global" as *;
+
+.delivery {
+   background-color: white;
+   margin-top: 60px;
+   @media (min-width: 800px) {
+      padding: 30px;
+   }
+   .box-delivery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      transition: 200ms;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      @media (min-width: 800px) {
+         grid-template-columns: 1fr 1fr;
+         transition: 200ms;
+      }
+      
+     .info-delivery {
+       font-family: $roboto;
+       padding: 25px 25px 0 25px;
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+   
+       @media (min-width: 880px) {
+         padding: 0;
+       }
+       @media (min-width: 1064px) {
+         gap: 30px;
+         padding-bottom: 30px;
+       }
+   
+       p:nth-child(1) {
+         color: $orange;
+         font-size: 18px;
+         font-weight: 700;
+         text-transform: uppercase;
+       }
+       p:nth-child(2),
+       p:nth-child(3) {
+         font-size: 18px;
+       }
+     }
+   
+     .map {
+       iframe {
+         border: none;
+         width: 100%;
+         height: 400px;
+         @media (min-width: 800px) {
+           height: 100%;
+           border-radius: 30px;
+           box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.2);
+         }
+       }
+     }
+   }
+}

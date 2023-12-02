@@ -10,6 +10,7 @@ import baner1 from "./assets/baner1.png";
 import baner2 from "./assets/baner2.jpg";
 import PizzasPage from "./components/pizzas/PizzasPage";
 import DrinksPage from "./components/drinks/DrinksPage";
+import Delivery from "./components/Delivery";
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
         <PizzasPage />
         {/* Drinks */}
         <DrinksPage />
+        {/* Delivery */}
+        <Delivery />
       </main>
       {/* <Footer /> */}
     </>
