@@ -9,7 +9,7 @@ ul {
 
 main {
   padding-top: 80px;
-  background-color: rgb(245, 236, 224);
+  background-color: rgb(255, 248, 230);
 }
 
 body::-webkit-scrollbar {
@@ -378,7 +378,15 @@ footer {
   display: flex;
   transition: 200ms;
 }
-@media (min-width: 444px) {
+@media (min-width: 445px) {
+  .pizza {
+    transition: 200ms;
+  }
+  .pizza:hover {
+    box-shadow: 1px 3px 10px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+@media (min-width: 445px) {
   .pizza {
     padding: 22px 28px;
     transition: 200ms;
@@ -401,6 +409,7 @@ footer {
 .pizza .img-box {
   display: flex;
   align-items: center;
+  aspect-ratio: 1/1;
 }
 @media (max-width: 444px) {
   .pizza .img-box {
@@ -409,6 +418,12 @@ footer {
 }
 .pizza .img-box img {
   width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+.pizza .img-box img:hover {
+  transform: scale(1.1) rotate(10deg);
+  transition: 300ms;
 }
 .pizza .box-right {
   font-family: "Montserrat";
@@ -429,7 +444,13 @@ footer {
     transition: 200ms;
   }
 }
+@media (min-width: 880px) {
+  .pizza .box-right {
+    height: 100%;
+  }
+}
 .pizza .box-right .right-boxTop {
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -473,10 +494,28 @@ footer {
   padding: 8px;
   font-size: 40px;
   display: flex;
+  transition: 200ms;
+}
+.pizza .box-right .right-boxBottom .btn-addToCard:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+  cursor: pointer;
+}
+.pizza .box-right .right-boxBottom .btn-addToCard:active {
+  transition: 200ms;
+  transform: scale(0.95);
+  opacity: 0.7;
 }
 
 .box-pizzas {
-  padding: 35px 20px 0 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 35px 30px 0 30px;
+}
+@media (max-width: 768px) {
+  .box-pizzas {
+    padding: 35px 20px 0 20px;
+  }
 }
 .box-pizzas .box-p {
   display: flex;
@@ -505,5 +544,204 @@ footer {
   .box-pizzas .list-pizzas {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+}
+@media (min-width: 880px) {
+  .box-pizzas .list-pizzas {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1064px) {
+  .box-pizzas .list-pizzas {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.drink {
+  display: flex;
+}
+@media (min-width: 445px) {
+  .drink {
+    transition: 200ms;
+  }
+  .drink:hover {
+    box-shadow: 1px 3px 10px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+@media (min-width: 445px) {
+  .drink {
+    padding: 22px 28px;
+    transition: 200ms;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 1px 0 30px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    gap: 22px;
+  }
+}
+@media (max-width: 444px) {
+  .drink {
+    border-bottom: 1px solid #c4c4c4;
+    transition: 200ms;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 0;
+  }
+}
+.drink .img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(235, 235, 235);
+  border-radius: 50%;
+  position: relative;
+  z-index: 5;
+  aspect-ratio: 1/1;
+}
+@media (max-width: 444px) {
+  .drink .img-box {
+    width: 45%;
+  }
+}
+.drink .img-box img {
+  position: absolute;
+  transform: scale(0.9);
+  z-index: 3;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+  transition: 300ms;
+}
+.drink .img-box img:hover {
+  transition: 300ms;
+  transform: scale(1.1) rotate(10deg);
+  overflow: hidden;
+  filter: drop-shadow(10px 10px 15px rgba(34, 34, 34, 0.5254901961));
+}
+.drink .box-right {
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 444px) {
+  .drink .box-right {
+    width: 55%;
+    padding: 30px 0 5px 0;
+    transition: 200ms;
+  }
+}
+@media (max-width: 400px) {
+  .drink .box-right {
+    padding: 30px 0 5px 0;
+    transition: 200ms;
+  }
+}
+.drink .box-right .right-boxTop {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.drink .box-right .right-boxTop p:nth-child(1) {
+  font-weight: 700;
+  font-size: 22px;
+}
+@media (max-width: 444px) {
+  .drink .box-right .right-boxTop p:nth-child(1) {
+    font-size: 18px;
+  }
+}
+.drink .box-right .right-boxTop p:nth-child(2) {
+  font-size: 14px;
+}
+@media (max-width: 444px) {
+  .drink .box-right .right-boxTop p:nth-child(2) {
+    font-size: 12px;
+  }
+}
+@media (min-width: 444px) {
+  .drink .box-right .right-boxTop p:nth-child(2) {
+    min-height: 50px;
+  }
+}
+.drink .box-right .right-boxBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.drink .box-right .right-boxBottom .price {
+  font-size: 18px;
+  font-weight: 700;
+}
+.drink .box-right .right-boxBottom .btn-addToCard {
+  background-color: #FF4E00;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  padding: 8px;
+  font-size: 40px;
+  display: flex;
+  transition: 200ms;
+}
+.drink .box-right .right-boxBottom .btn-addToCard:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+  cursor: pointer;
+}
+.drink .box-right .right-boxBottom .btn-addToCard:active {
+  transition: 200ms;
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+.box-drinks {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 30px 0 30px;
+}
+@media (max-width: 768px) {
+  .box-drinks {
+    padding: 35px 20px 0 20px;
+  }
+}
+.box-drinks .box-p {
+  display: flex;
+  justify-content: center;
+}
+.box-drinks .box-p .p-drink {
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  background-color: #FF4E00;
+  padding: 9px 10px;
+  border-radius: 30px;
+}
+.box-drinks .list-drinks {
+  margin-top: 30px;
+  display: grid;
+}
+@media (min-width: 444px) {
+  .box-drinks .list-drinks {
+    gap: 30px;
+  }
+}
+@media (min-width: 600px) {
+  .box-drinks .list-drinks {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+@media (min-width: 880px) {
+  .box-drinks .list-drinks {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1064px) {
+  .box-drinks .list-drinks {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }/*# sourceMappingURL=styles.css.map */

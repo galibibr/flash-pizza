@@ -9,6 +9,7 @@ import { Pagination } from "swiper/modules";
 import baner1 from "./assets/baner1.png";
 import baner2 from "./assets/baner2.jpg";
 import PizzasPage from "./components/pizzas/PizzasPage";
+import DrinksPage from "./components/drinks/DrinksPage";
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
         </div>
         {/* Pizzas */}
         <PizzasPage />
+        {/* Drinks */}
+        <DrinksPage />
       </main>
       {/* <Footer /> */}
     </>
