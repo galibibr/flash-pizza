@@ -25,6 +25,17 @@ const DrinksPage = () => {
       name: "Coca-cola",
       price: "от 90 руб",
     },
+    {
+      img: d1,
+      name: "Pepsi",
+      price: "от 120 руб",
+    },
+    {
+      img: d2,
+      name: "Coca-cola",
+      price: "от 80 руб",
+    },
+
   ];
   return (
     <section className="box-drinks">
